@@ -6,19 +6,40 @@
 
 - `index.html`: The main HTML file defining the video thumbnail display.
 - `style.css`: The CSS file providing styling for the video thumbnails.
-## 🚀 How to Run This Project
 
-> 🔍 This tool helps you analyze SSL/TLS misconfigurations like self-signed certs, LUCKY13, missing HSTS, long certificate validity, and no SANs using OpenSSL and Python.
+# 🔐 TLS_Troiuble_Check
+
+This tool helps analyze **SSL/TLS misconfigurations** like:
+
+- Self-signed certificates
+- LUCKY13 vulnerability
+- Missing HSTS header
+- Long certificate validity
+- Missing Subject Alternative Names (SANs)
+
+---
+
+## 📁 Project Structure
+
+| File         | Description                                       |
+|--------------|---------------------------------------------------|
+| `index.html` | Main HTML file displaying video thumbnail         |
+| `style.css`  | CSS file for styling the video thumbnail UI       |
+| `tls_check.py` | Python script for SSL/TLS analysis using OpenSSL |
+
+---
+
+## 🚀 How to Run This Project (Python Version)
 
 ### 🧰 Prerequisites
 
 - Python 3.x installed
 - OpenSSL installed
-- `pip` for installing dependencies
+- `pip` installed
 
 ---
 
-### ⚙️ Setup & Run Steps
+### ⚙️ Setup & Execution
 
 1. **Clone this repository**
    ```bash
@@ -42,7 +63,7 @@ nginx
 Copy
 Edit
 Enter domain: https://example.com
-View the output You'll get info on:
+Output will include:
 
 🧾 Certificate validity
 
@@ -56,10 +77,6 @@ View the output You'll get info on:
 
 💣 Detection of LUCKY13 (if possible)
 
-🎥 Demo
-Wanna see it in action? Watch the walkthrough on Loom:
-👉 Click to watch
-
 🧪 Sample Output
 bash
 Copy
@@ -68,38 +85,26 @@ Edit
 [+] HSTS header is missing ⚠️  
 [+] Certificate will expire in 120 days  
 [+] SANs include: www.example.com, example.com  
----
+⚙️ How to Run with testssl.sh (WSL)
+This project also supports scanning via testssl.sh on WSL (Windows Subsystem for Linux).
 
-### ✅ 5. Scroll down and commit changes
-- At the bottom, you’ll see:
-  - A field for **commit message** → write something like: `Added usage steps and demo video`
-  - Click ✅ **Commit changes**
+🧰 Prerequisites
+Windows 10/11 with WSL enabled
 
+WSL distro (e.g., Ubuntu)
 
+Git installed in WSL
 
-## ⚙️ Steps to Run with testssl.sh (on WSL)
+🧪 Setup Instructions
+Open WSL (Search "Ubuntu" in Start)
 
-> 🛡️ This project uses [`testssl.sh`](https://github.com/drwetter/testssl.sh) to scan for SSL/TLS misconfigurations. You can run this from **WSL (Windows Subsystem for Linux)**.
+Install Git
 
----
-
-### 🧰 Prerequisites
-
-- Windows 10/11 with **WSL installed**
-- WSL distro (e.g., Ubuntu)
-- Git installed in WSL
-
----
-
-### 🧪 Setup Instructions
-
-1. **Open WSL**  
-   (You can search "Ubuntu" in the Start menu)
-
-2. **Install git (if not already)**
-   ```bash
-   sudo apt update
-   sudo apt install git
+bash
+Copy
+Edit
+sudo apt update
+sudo apt install git
 Clone testssl.sh repo
 
 bash
@@ -108,7 +113,7 @@ Edit
 git clone --depth 1 https://github.com/drwetter/testssl.sh.git
 cd testssl.sh
 chmod +x testssl.sh
-Run the scan Replace https://192.168.56.1:8443 with your target domain/IP.
+Run the scan Replace the target URL with your own:
 
 bash
 Copy
@@ -118,30 +123,36 @@ This will:
 
 Skip reverse DNS lookups (--nodns)
 
-Do a quicker scan (--fast)
+Perform a fast scan (--fast)
 
-Show SSL/TLS vulnerabilities and config issues
+Output SSL/TLS vulnerabilities
 
 🧪 Sample Output (Short)
 bash
 Copy
 Edit
- Start 2025-04-21 10:00:00      -->>  https://192.168.56.1:8443 <<--
+Start 2025-04-21 10:00:00  -->>  https://192.168.56.1:8443  <<--
 
- Testing protocols via sockets except NPN+ALPN                         via openssl s_client 
- TLS extensions (server name, signature algo,...)                     via openssl s_client 
- Server certificate and hostname matching                            via openssl s_client 
+Testing protocols via sockets except NPN+ALPN
+TLS extensions (server name, signature algo, ...)
+Server certificate and hostname matching
 ...
- Done 2025-04-21 10:00:45 [  45s] -->>  https://192.168.56.1:8443 <<--
-🎥 Demo
-Need a walkthrough? Check out the video:
-👉 https://www.loom.com/share/97cfafc5a417472ea254ed7aed69e2a0?sid=d57fcdbc-cb54-4e79-94bd-9c2f56531078
+Done 2025-04-21 10:00:45 [  45s] -->>  https://192.168.56.1:8443  <<--
+▶️ Video Link
+Walkthrough demo showing usage and setup
+🎥 Click here to watch the video
+
+---
+## 📑 Presentation
+
+Check out the slides that go along with this project:
+
+🎞️ [View the Presentation](https://www.canva.com/design/DAGfQ6rSwYs/tDsBn6cb-WeZ0bMh0_aObA/edit?ui=eyJIIjp7IkEiOnRydWV9fQ)
+---
 
 📝 Notes
-testssl.sh does not require installation, just clone and run.
+testssl.sh doesn't require installation — just clone and run
 
-Use --jsonfile or --htmlfile options to export reports.
+Use --jsonfile or --htmlfile to export scan reports
 
-For full scan, remove --fast and --nodns.
-
-
+For a full deep scan, remove --fast and --nodns options
