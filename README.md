@@ -127,15 +127,7 @@ Perform a fast scan (--fast)
 
 Output SSL/TLS vulnerabilities
 
-🧪 Sample Output (Short)
-bash
-Copy
-Edit
-Start 2025-04-21 10:00:00  -->>  https://192.168.56.1:8443  <<--
 
-Testing protocols via sockets except NPN+ALPN
-TLS extensions (server name, signature algo, ...)
-Server certificate and hostname matching
 ---
 
 ## 🎥 Demo
