@@ -24,7 +24,7 @@
 1. **Clone this repository**
    ```bash
    git clone https://github.com/vishnusaipriya7/TLS_Troiuble_Check.git
-   cd TLS_Troiuble_Check
+   cd TLS_Trouble_Check
 
   Install dependencies
 
