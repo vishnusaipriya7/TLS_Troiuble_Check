@@ -68,10 +68,6 @@ Edit
 [+] HSTS header is missing ⚠️  
 [+] Certificate will expire in 120 days  
 [+] SANs include: www.example.com, example.com  
-yaml
-Copy
-Edit
-
 ---
 
 ### ✅ 5. Scroll down and commit changes
@@ -79,29 +75,8 @@ Edit
   - A field for **commit message** → write something like: `Added usage steps and demo video`
   - Click ✅ **Commit changes**
 
----
-
-Boom 💥 your README is now updated with all the info anyone needs to run your project like a pro.
-
-Need help adding screenshots or badges next? I can help you flex that README even more 😎
 
 
-
-
-
-
-You said:
-i mean inclube open wsl and install testssl.shh and scan website using ./testssl.sh --fast --nodns min https://192.168.56.1:8443 command 
-
-
-ChatGPT said:
-Ahhh gotcha now, Vishnu! 💡 You're saying your project uses WSL and testssl.sh to scan websites, and you wanna include those setup steps in the README.md, right?
-
-No worries, I gotchu 😎 — here's an updated Steps section you can directly copy-paste into your README.md, including WSL, installing testssl.sh, and running the scan:
-
-markdown
-Copy
-Edit
 ## ⚙️ Steps to Run with testssl.sh (on WSL)
 
 > 🛡️ This project uses [`testssl.sh`](https://github.com/drwetter/testssl.sh) to scan for SSL/TLS misconfigurations. You can run this from **WSL (Windows Subsystem for Linux)**.
@@ -160,7 +135,7 @@ Edit
  Done 2025-04-21 10:00:45 [  45s] -->>  https://192.168.56.1:8443 <<--
 🎥 Demo
 Need a walkthrough? Check out the video:
-👉 Loom Demo Video
+👉 https://www.loom.com/share/97cfafc5a417472ea254ed7aed69e2a0?sid=d57fcdbc-cb54-4e79-94bd-9c2f56531078
 
 📝 Notes
 testssl.sh does not require installation, just clone and run.
