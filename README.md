@@ -138,9 +138,12 @@ TLS extensions (server name, signature algo, ...)
 Server certificate and hostname matching
 ...
 Done 2025-04-21 10:00:45 [  45s] -->>  https://192.168.56.1:8443  <<--
+---
 ▶️ Video Link
-Walkthrough demo showing usage and setup
-🎥 Click here to watch the video
+## 🎥 Demo
+
+👉 [Click to watch demo](https://www.loom.com/share/97cfafc5a417472ea254ed7aed69e2a0?sid=a2286058-3f88-4cad-93cf-46015172cd8d)
+
 
 ---
 ## 📑 Presentation
